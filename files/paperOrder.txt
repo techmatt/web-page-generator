@@ -1,0 +1,4 @@
+inertialNavigation
+patternColoring
+tiledPatterns
+sceneSynthesis

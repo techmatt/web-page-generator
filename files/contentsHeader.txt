@@ -40,5 +40,4 @@
 	
 	<div id="content">
 <div id="normalcontent">
-    <h3>
-        Publications</h3>
+    

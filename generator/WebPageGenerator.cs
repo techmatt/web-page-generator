@@ -14,6 +14,8 @@ namespace WebGenerator
         Dictionary<string, string[]> bibs = new Dictionary<string, string[]>();
         Dictionary<string, string> abstracts = new Dictionary<string, string>();
         string paperHeader, paperFooter;
+        string contentsHeader, contentsFooter;
+        string[] paperOrder;
         
         public void Generate(string inputDir, string outputDir)
         {
@@ -24,14 +26,17 @@ namespace WebGenerator
 
             paperHeader = File.ReadAllText(inputDir + "paperHeader.txt");
             paperFooter = File.ReadAllText(inputDir + "paperFooter.txt");
+            contentsHeader = File.ReadAllText(inputDir + "contentsHeader.txt");
+            contentsFooter = File.ReadAllText(inputDir + "contentsFooter.txt");
+            paperOrder = File.ReadAllLines(inputDir + "paperOrder.txt");
 
             foreach(string paper in papers.Keys)
             {
                 ProcessPaper(paper, outputDir);
             }
-        }
 
-        
+            MakeContents(outputDir);
+        }
 
         void LoadAuthors(string path)
         {
@@ -122,7 +127,7 @@ namespace WebGenerator
             {
                 lines.Add("<span>");
                 int affiliationIndex = affiliations.IndexOf(affiliation) + 1;
-                lines.Add("<sup>" + affiliationIndex + "</sup>");
+                if (affiliations.Count > 1) lines.Add("<sup>" + affiliationIndex + "</sup>");
                 lines.Add(affiliation);
                 lines.Add("</span>");
             }
@@ -182,6 +187,14 @@ namespace WebGenerator
                 lines.Add("</p>");
             }
 
+            if (p.ContainsKey("video"))
+            {
+                string video = p["video"];
+                lines.Add("<p class=\"item\">");
+                lines.Add("Video: <a href=\"" + video + "\"><img src=\"Images/video-icon.png\"/>MP4</a>");
+                lines.Add("</p>");
+            }
+
             if (p.ContainsKey("scholar"))
             {
                 string scholar = p["scholar"];
@@ -208,7 +221,56 @@ namespace WebGenerator
         
             lines.Add(paperFooter);
 
-            System.IO.File.WriteAllLines(outputDir + paper + ".html", lines);
+            System.IO.File.WriteAllLines(outputDir + paper + ".html", lines, Encoding.GetEncoding("iso-8859-1"));
+        }
+
+        void MakeContents(string outputDir)
+        {
+            List<string> lines = new List<string>();
+
+            lines.Add(contentsHeader);
+
+            lines.Add("<div id=\"mainD\">");
+            lines.Add("<div id=\"contentD\">");
+            lines.Add("<h3>Publications</h3><br/><br/><br/>");
+
+            foreach (string paper in paperOrder)
+            {
+                var p = papers[paper];
+                string title = p["title"].Replace("<br/>"," ");
+                string conference = p["conferenceShort"];
+                string thumbnail = p["thumbnail"];
+                string pdf = p["pdf"];
+                string blurb = p["blurb"];
+
+                string authorText = "";
+                foreach (string author in p["authors"].Split(','))
+                {
+                    var a = authors[author];
+                    string name = a["name"];
+                    if (authorText.Length == 0) authorText = name;
+                    else authorText = authorText + ", " + name;
+                }
+
+                lines.Add("<div class=\"projP\">");
+                lines.Add("<div class=\"thumbP\">");
+                lines.Add("<img src=\"" + thumbnail + "\" />");
+                lines.Add("</div>");
+                lines.Add("<div class=\"textP\">");
+                lines.Add("<p class=\"titleP\"><a href=\"" + paper + ".html\">" + title + "</a></p>");
+                lines.Add("<p class=\"authorsP\">" + authorText + "</p>");
+                lines.Add("<p class=\"venueP\">" + conference + "</p>");
+                lines.Add("<p class=\"descP\">" + blurb + "</p>");
+                lines.Add("<a href=\"" + pdf + "\">paper</a> | <a href=\"" + paper + ".html\">project page</a>");
+                lines.Add("</div>");
+                lines.Add("</div>");
+            }
+
+            lines.Add("</div>");
+            lines.Add("</div>");
+            lines.Add(contentsFooter);
+
+            System.IO.File.WriteAllLines(outputDir + "publications.html", lines, Encoding.GetEncoding("iso-8859-1"));
         }
     }
 }
