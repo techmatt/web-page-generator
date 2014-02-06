@@ -17,6 +17,9 @@ body
 {
 background: #FFFFFF url('Images/Background1.png');
 padding: 35px 0px 35px 0px;
+width:1280px;
+margin-left:auto;
+    margin-right:auto;
 }
 
 body,input
@@ -24,13 +27,14 @@ body,input
 font-size: 12pt;
 font-family: "arial", "times new roman", serif;
 color: #333333;
+text-align: left;
 }
 
 p
 {
 line-height: 1.5em;
 margin-bottom: 1.0em;
-text-align: justify;
+text-align: left;
 }
 
 code
@@ -551,4 +555,47 @@ h1,h2,h3
 #clearfloatsD
 {
     clear: both;
+}
+
+.projP
+{
+ height:200px;
+ /*border-top-style:solid;
+ border-top-color:#262626;
+ border-top-width:1px;*/
+ padding:10px 0px 10px 0px;
+}
+
+.thumbP
+{
+ float:left;
+ width:250px;
+ padding-right:30px;
+}
+
+.textP
+{
+ float:left;
+ width:700px;
+}
+
+.titleP
+{
+ font-size:1.2em;
+ font-weight:bold;
+ color:#1e3472;
+}
+
+.authorsP
+{
+ font-style:italic;
+}
+
+.venueP
+{
+ font-weight:bold;
+}
+
+.descP
+{
 }

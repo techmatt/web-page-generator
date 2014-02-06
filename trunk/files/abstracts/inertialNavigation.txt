@@ -1,0 +1,8 @@
+We present a novel method to improve the robustness of real-time 3D surface reconstruction by incorporating
+inertial sensor data when determining inter-frame alignment. With commodity inertial sensors, we can significantly
+reduce the number of iterative closest point (ICP) iterations required per frame. Our system is also able to
+determine when ICP tracking becomes unreliable and use inertial navigation to correctly recover tracking, even
+after significant time has elapsed. This enables less experienced users to more quickly acquire 3D scans. We apply
+our framework to several different surface reconstruction tasks and demonstrate that enabling inertial navigation
+allows us to reconstruct scenes more quickly and recover from situations where reconstructing without IMU data
+produces very poor results.
