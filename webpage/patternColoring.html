@@ -44,10 +44,10 @@
 <div id="mainD">
 <div id="contentD">
 <div id="headerD">
-<h1>Example-based Synthesis of 3D Object Arrangements</h1>
+<h1>Probabilistic Color-by-Numbers: Suggesting Pattern Colorizations Using Factor Graphs</h1>
 <div id="authorsD">
 <span>
-<a href="http://graphics.stanford.edu/~mdfisher/publications.html">Matthew Fisher</a>
+<a href="http://graphics.stanford.edu/~sharonl/">Sharon Lin</a>
 <sup>1</sup>
 </span>
 <span>
@@ -55,11 +55,7 @@
 <sup>1</sup>
 </span>
 <span>
-<a href="http://graphics.stanford.edu/~msavva/">Manolis Savva</a>
-<sup>1</sup>
-</span>
-<span>
-<a href="http://www.cs.princeton.edu/~funk/">Thomas Funkhouser</a>
+<a href="http://graphics.stanford.edu/~mdfisher/publications.html">Matthew Fisher</a>
 <sup>1</sup>
 </span>
 <span>
@@ -70,14 +66,14 @@
 <div id="affiliationsD">
 </div>
 <div id="centerpieceD">
-<img id="teaserD" src="papers/sceneSynthesisTeaser.jpg"/>
+<img id="teaserD" src="papers/patternColoringTeaser.jpg"/>
 <span>ACM Transactions on Graphics (Proc. SIGGRAPH Asia 2012)</span>
 </div>
 <div id="gutsD">
 <div id="abstractD">
 <h2>Abstract</h2>
 <p>
-We present a method for synthesizing 3D object arrangements from examples. Given a few user-provided examples, our system can synthesize a diverse set of plausible new scenes by learning from a larger scene database. We rely on three novel contributions. First, we introduce a probabilistic model for scenes based on Bayesian networks and Gaussian mixtures that can be trained from a small number of input examples. Second, we develop a clustering algorithm that groups objects occurring in a database of scenes according to their local scene neighborhoods. These contextual categories allow the synthesis process to treat a wider variety of objects as interchangeable. Third, we train our probabilistic model on a mix of user-provided examples and relevant scenes retrieved from the database. This mixed model learning process can be controlled to introduce additional variety into the synthesized scenes. We evaluate our algorithm through qualitative results and a perceptual study in which participants judged synthesized scenes to be highly plausible, as compared to hand-created scenes.
+We present a probabilistic factor graph model for automatically coloring 2D patterns. The model is trained on example patterns to statistically capture their stylistic properties. It incorporates terms for enforcing both color compatibility and spatial arrangements of colors that are consistent with the training examples. Using Markov Chain Monte Carlo, the model can be sampled to generate a diverse set of new colorings for a target pattern. This general probabilistic framework allows users to guide the generated suggestions via conditional inference or additional soft constraints. We demonstrate results on a variety of coloring tasks, and we evaluate the model through a perceptual study in which participants judged sampled colorings to be significantly preferable to other automatic baselines. 
 </p>
 </div>
 <div id="extrasD">
