@@ -1,0 +1,12 @@
+</div>
+	</div>
+
+	<div id="footer">
+			<div class="left">&copy; 2014 Matthew Fisher. All rights reserved.</div>
+			<div class="right"><a href="http://www.nodethirtythree.com/">NodeThirtyThree Design</a></div>
+	</div>
+	
+</div>
+
+</body>
+</html>

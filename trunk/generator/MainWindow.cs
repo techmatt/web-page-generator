@@ -19,7 +19,8 @@ namespace WebGenerator
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
-
+            WebPageGenerator generator = new WebPageGenerator();
+            generator.Generate(textBoxInputDir.Text, textBoxOutputDir.Text);
         }
     }
 }
