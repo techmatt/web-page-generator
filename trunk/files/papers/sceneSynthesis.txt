@@ -1,7 +1,7 @@
 title=Example-based Synthesis of 3D Object Arrangements
 authors=matt,daniel,manolis,tom,pat
 conference=ACM Transactions on Graphics (Proc. SIGGRAPH Asia 2012)
-conferenceShort=SIGGRAPH Asia 2012
+conferenceShort=SIGGRAPH Asia 2012, Singapore
 pdf=papers/sceneSynthesis.pdf
 thumbnail=papers/sceneSynthesisThumbnail.png
 teaser=papers/sceneSynthesisTeaser.jpg
