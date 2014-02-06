@@ -4,6 +4,8 @@ conference=ACM Transactions on Graphics (Proc. SIGGRAPH Asia 2012)
 pdf=papers/sceneSynthesis.pdf
 thumbnail=papers/sceneSynthesisThumbnail.jpg
 teaser=papers/sceneSynthesisTeaser.jpg
-bib=papers/sceneSynthesis.bib
 supplemental=papers/sceneSynthesisSupplemental.zip
+slides=papers/sceneSynthesisSlides.pptx
+database=papers/databaseFull.zip
 code=http://code.google.com/p/stanford-scene-database/
+scholar=http://scholar.google.com/citations?view_op=view_citation&hl=en&user=PUSWc4EAAAAJ&citation_for_view=PUSWc4EAAAAJ:IjCSPb-OGe4C

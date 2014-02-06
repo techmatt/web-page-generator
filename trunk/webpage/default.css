@@ -513,23 +513,28 @@ h1,h2,h3
 #abstractD p
 {
     line-height: 150%;
+    text-align: left;
 }
 
 #extrasD
 {
+    text-align: left;
     float: right;
     width: 47%;
 }
 #extrasD .item
 {
+    text-align: left;
     font-size: 12pt;
 }
 #extrasD .item a
 {
+    text-align: left;
     font-weight: bold;
 }
 #extrasD .item img
 {
+    text-align: left;
     vertical-align: middle;
     height: 20px;
     margin-left: 8px;
@@ -538,6 +543,7 @@ h1,h2,h3
 
 .bibtexD
 {
+    text-align: left;
     margin-top: 10px;
     font: 9pt serif;
 }

@@ -19,8 +19,11 @@ namespace WebGenerator
             var result = new Dictionary<string, string>();
             foreach(string s in File.ReadAllLines(filename))
             {
-                var parts = s.Split('=');
-                if(parts.Length == 2) result.Add(parts[0], parts[1]);
+                if(s.Contains('='))
+                {
+                    int splitIndex = s.IndexOf('=');
+                    result.Add(s.Substring(0, splitIndex), s.Substring(splitIndex + 1));
+                }
             }
             return result;
         }
