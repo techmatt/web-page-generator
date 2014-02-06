@@ -455,7 +455,8 @@ h1,h2,h3
 
 #authorsD
 {
-    margin-bottom: 20px
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 #authorsD span
 {
@@ -468,10 +469,17 @@ h1,h2,h3
     font-size: 11pt;
 }
 
+#affiliationsD
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 #affiliationsD span
 {
     margin-left: 60px;
     margin-right: 60px;
+    
 }
 
 #centerpieceD
