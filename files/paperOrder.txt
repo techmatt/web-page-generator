@@ -2,3 +2,4 @@ inertialNavigation
 patternColoring
 tiledPatterns
 sceneSynthesis
+graphKernel

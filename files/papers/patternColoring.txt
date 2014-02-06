@@ -1,7 +1,7 @@
 title=Probabilistic Color-by-Numbers: Suggesting Pattern Colorizations<br/>Using Factor Graphs
 authors=sharon,daniel,matt,pat
 conference=ACM Transactions on Graphics (Proc. SIGGRAPH 2013)
-conferenceShort=SIGGRAPH 2013
+conferenceShort=SIGGRAPH 2013, Los Angeles
 pdf=papers/patternColoring.pdf
 thumbnail=papers/patternColoringThumbnail.png
 teaser=papers/patternColoringTeaser.png
