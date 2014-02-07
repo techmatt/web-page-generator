@@ -221,7 +221,7 @@ namespace WebGenerator
         
             lines.Add(paperFooter);
 
-            System.IO.File.WriteAllLines(outputDir + paper + ".html", lines, Encoding.GetEncoding("iso-8859-1"));
+            System.IO.File.WriteAllLines(outputDir + paper + ".html", lines, Encoding.GetEncoding("UTF-8"));
         }
 
         void MakeContents(string outputDir)
@@ -270,7 +270,7 @@ namespace WebGenerator
             lines.Add("</div>");
             lines.Add(contentsFooter);
 
-            System.IO.File.WriteAllLines(outputDir + "publications.html", lines, Encoding.GetEncoding("iso-8859-1"));
+            System.IO.File.WriteAllLines(outputDir + "publications.html", lines, Encoding.GetEncoding("UTF-8"));
         }
     }
 }
