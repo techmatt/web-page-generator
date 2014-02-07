@@ -3,3 +3,7 @@ patternColoring
 tiledPatterns
 sceneSynthesis
 graphKernel
+contextSearch
+diagSplit
+vectorFieldDesign
+intrinsicDelaunay
