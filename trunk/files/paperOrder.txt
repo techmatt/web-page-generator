@@ -1,3 +1,4 @@
+exotypes
 inertialNavigation
 patternColoring
 tiledPatterns
