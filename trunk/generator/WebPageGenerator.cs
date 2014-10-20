@@ -94,29 +94,39 @@ namespace WebGenerator
             affiliations.Add("Stanford University");
             foreach(string author in p["authors"].Split(','))
             {
-                var a = authors[author];
-                string affiliation = a["affiliation"];
-                if(!affiliations.Contains(affiliation))
+                if (authors.ContainsKey(author))
                 {
-                    affiliations.Add(affiliation);
+                    var a = authors[author];
+                    string affiliation = a["affiliation"];
+                    if (!affiliations.Contains(affiliation))
+                    {
+                        affiliations.Add(affiliation);
+                    }
                 }
             }
 
             foreach(string author in p["authors"].Split(','))
             {
                 lines.Add("<span>");
-                var a = authors[author];
-                string website = a["website"];
-                string name = a["name"];
-                string affiliation = a["affiliation"];
-                lines.Add("<a href=\"" + website + "\">" + name + "</a>");
-
-                if(affiliations.Count > 1)
+                if (authors.ContainsKey(author))
                 {
-                    int affiliationIndex = affiliations.IndexOf(affiliation) + 1;
-                    lines.Add("<sup>" + affiliationIndex + "</sup>");
+                    var a = authors[author];
+                    string website = a["website"];
+                    string name = a["name"];
+                    string affiliation = a["affiliation"];
+                    lines.Add("<a href=\"" + website + "\">" + name + "</a>");
+
+                    if (affiliations.Count > 1)
+                    {
+                        int affiliationIndex = affiliations.IndexOf(affiliation) + 1;
+                        lines.Add("<sup>" + affiliationIndex + "</sup>");
+                    }
+                    lines.Add("</span>");
                 }
-                lines.Add("</span>");
+                else
+                {
+                    lines.Add("<a href=\"https://www.google.com/search?q=" + author.Replace(" ", "+") + "\">" + author + "</a>");
+                }
             }
 
             lines.Add("</div>");
@@ -246,8 +256,11 @@ namespace WebGenerator
                 string authorText = "";
                 foreach (string author in p["authors"].Split(','))
                 {
-                    var a = authors[author];
-                    string name = a["name"];
+                    string name = author;
+                    
+                    if(authors.ContainsKey(author))
+                        name = authors[author]["name"];
+
                     if (authorText.Length == 0) authorText = name;
                     else authorText = authorText + ", " + name;
                 }

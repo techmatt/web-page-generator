@@ -16,10 +16,6 @@ namespace WebGenerator
 
         public static Dictionary<string, string> LoadMap(string filename)
         {
-            if(filename.Contains("matthias"))
-            {
-                int a = 5;
-            }
             var result = new Dictionary<string, string>();
             foreach (string s in File.ReadAllLines(filename, Encoding.GetEncoding("iso-8859-1")))
             {
@@ -27,10 +23,6 @@ namespace WebGenerator
                 {
                     int splitIndex = s.IndexOf('=');
                     result.Add(s.Substring(0, splitIndex), s.Substring(splitIndex + 1));
-                    if(s.Contains("nei"))
-                    {
-                        int a = 5;
-                    }
                 }
             }
             return result;
