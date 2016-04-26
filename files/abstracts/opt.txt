@@ -1,0 +1,2 @@
+We propose a new language, Opt, in which a user simply writes energy functions over image- or graph-structured unknowns, and a compiler automatically generates state-of-the-art GPU optimization kernels.
+

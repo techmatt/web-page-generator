@@ -1,0 +1,2 @@
+We learn a probabilistic model connecting human poses and arrangements of objects from observations of interactions collected with commodity RGB-D sensors. This model is encoded as a set of Prototypical Interaction Graphs (PiGraphs): a human-centric representation capturing physical contact and attention linkages between geometry and the human body.
+

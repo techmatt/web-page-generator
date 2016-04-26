@@ -599,3 +599,11 @@ h1,h2,h3
 .descP
 {
 }
+
+
+.borderexample
+{
+border-style:solid;
+border-width:1px;
+border-color:#287EC7;
+} 

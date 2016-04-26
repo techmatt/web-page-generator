@@ -1,0 +1,2 @@
+In this paper, we introduce 3DMatch, a data-driven local feature learner that jointly learns a geometric feature representation and an associated metric function from a large collection of real-world scanning data.
+

@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+    Webpage by Matthew Fisher
+
+-->
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Matt's Webcorner - Publications</title>
+<meta name="keywords" content="Matthew Fisher, Publications, Computer Graphics, SIGGRAPH, research" />
+<meta name="description" content="Publication List for Matthew Fisher" />
+<link rel="stylesheet" type="text/css" href="default.css" />
+</head>
+<body>
+
+<div id="upbg"></div>
+
+<div id="outer">
+
+
+	<div id="header">
+		<div id="headercontent">
+			<h1><font face="georgia">Matt's Webcorner</font></h1>
+			<h2>Stanford 2016</h2>
+		</div>
+	</div>
+
+	<div id="menu">
+		<ul>
+			<li><a href="index.html" >Home</a></li>
+			<li><a href="projects.html" >Projects</a></li>
+			<li><a href="publications.html" class="active">Publications</a></li>
+			<li><a href="recipes.html" >Recipes</a></li>
+			<li><a href="contact.html" >Contact</a></li>
+		</ul>
+	</div>
+	<div id="menubottom"></div>
+
+	
+	<div id="content">
+<div id="normalcontent">
+
+<div id="mainD">
+<div id="contentD">
+<div id="headerD">
+<h1>Ebb: A DSL for Physical Simulation on CPUs and GPUs</h1>
+<div id="authorsD">
+<span>
+<a href="http://www.gilbertbernstein.com/">Gilbert Bernstein</a>
+</span>
+<span>
+<a href="http://www.stanford.edu/">Chinmayee Shah</a>
+</span>
+<span>
+<a href="http://www.stanford.edu/">Crystal Lemire</a>
+</span>
+<span>
+<a href="https://github.com/zdevito">Zachery DeVito</a>
+</span>
+<span>
+<a href="http://graphics.stanford.edu/~mdfisher/publications.html">Matthew Fisher</a>
+</span>
+<span>
+<a href="http://csl.stanford.edu/~pal/">Philip Levis</a>
+</span>
+<span>
+<a href="http://graphics.stanford.edu/~hanrahan/">Pat Hanrahan</a>
+</span>
+</div>
+<div id="affiliationsD">
+<span>
+Stanford University
+</span>
+</div>
+<div id="centerpieceD">
+<img id="teaserD" src="papers/ebbTeaser.png"/>
+<span>Transactions on Graphics (SIGGRAPH) 2016</span>
+</div>
+<div id="gutsD">
+<div id="abstractD">
+<h2>Abstract</h2>
+<br/>
+<p>
+Designing programming environments for physical simulation is challenging because simulations rely on diverse algorithms and geometric domains. These challenges are compounded when we try to run efficiently on heterogeneous parallel architectures. We present Ebb, a domain-specific language (DSL) for simulation, that runs efficiently on both CPUs and GPUs. Unlike previous DSLs, Ebb uses a three-layer architecture to separate (1) simulation code, (2) definition of data structures for geometric domains, and (3) runtimes supporting parallel architectures. Different geometric domains are implemented as libraries that use a common, unified, relational data model. By structuring the simulation framework in this way, programmers implementing simulations can focus on the physics and algorithms for each simulation without worrying about their implementation on parallel computers. Because the geometric domain libraries are all implemented using a common runtime based on relations, new geometric domains can be added as needed, without specifying the details of memory management, mapping to different parallel architectures, or having to expand the runtime's interface. We evaluate Ebb by comparing it to several widely used simulations, demonstrating comparable performance to hand-written GPU code where available, and surpassing existing CPU performance optimizations by up to 9x when no GPU code exists.
+</p>
+</div>
+<div id="extrasD">
+<h2>Extras</h2>
+<br/>
+<p class="item">
+Paper: <a href="papers/ebb.pdf"><img src="Images/pdf-icon.png"/>PDF</a>
+</p>
+<p class="item">
+Database Example Code: <a href="https://gilbo.github.io/liszt-ebb/"><img src="Images/code-icon.png"/>CODE</a>
+</p>
+<div class="item">
+BibTeX citation:
+<div class="bibtexD">
+@article{DBLP:journals/corr/BernsteinSLDFLH15,
+<br/>
+  author    = {Gilbert Louis Bernstein and
+<br/>
+               Chinmayee Shah and
+<br/>
+               Crystal Lemire and
+<br/>
+               Zachary DeVito and
+<br/>
+               Matthew Fisher and
+<br/>
+               Philip Levis and
+<br/>
+               Pat Hanrahan},
+<br/>
+  title     = {Ebb: {A} {DSL} for Physical Simluation on CPUs and GPUs},
+<br/>
+  journal   = {CoRR},
+<br/>
+  volume    = {abs/1506.07577},
+<br/>
+  year      = {2015},
+<br/>
+  url       = {http://arxiv.org/abs/1506.07577},
+<br/>
+  timestamp = {Wed, 01 Jul 2015 15:10:24 +0200},
+<br/>
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/BernsteinSLDFLH15},
+<br/>
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+<br/>
+}
+<br/>
+</div>
+</div>
+</div>
+<div id="clearfloatsD"></div>
+</div>
+</div>
+</div>
+	</div>
+
+	<div id="footer">
+			<div class="left">&copy; 2015 Matthew Fisher. All rights reserved.</div>
+			<div class="right"><a href="http://www.nodethirtythree.com/">NodeThirtyThree Design</a></div>
+	</div>
+	
+</div>
+
+</body>
+</html>
+

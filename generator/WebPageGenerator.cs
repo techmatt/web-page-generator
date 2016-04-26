@@ -242,7 +242,8 @@ namespace WebGenerator
 
             lines.Add("<div id=\"mainD\">");
             lines.Add("<div id=\"contentD\">");
-            lines.Add("<h3>Publications</h3><br/><br/><br/>");
+                        lines.Add("<p class=\"borderexample\"></p>");            lines.Add("<center><h3>Publications</h3></center><br/>");
+            lines.Add("<br/><p class=\"borderexample\"></p><br/><br/>");
 
             foreach (string paper in paperOrder)
             {
@@ -270,13 +271,45 @@ namespace WebGenerator
                 lines.Add("<img src=\"" + thumbnail + "\" />");
                 lines.Add("</div>");
                 lines.Add("<div class=\"textP\">");
-                lines.Add("<p class=\"titleP\"><a href=\"" + paper + ".html\">" + title + "</a></p>");
+
+                if (p.ContainsKey("project"))
+                {
+                    lines.Add("<p class=\"titleP\"><a href=\"" + p["project"] + "\">" + title + "</a></p>");
+                }
+                else
+                {
+                    lines.Add("<p class=\"titleP\"><a href=\"" + paper + ".html\">" + title + "</a></p>");
+                }
                 lines.Add("<p class=\"authorsP\">" + authorText + "</p>");
                 lines.Add("<p class=\"venueP\">" + conference + "</p>");
                 lines.Add("<p class=\"descP\">" + blurb + "</p>");
-                lines.Add("<a href=\"" + pdf + "\">paper</a> | <a href=\"" + paper + ".html\">project page</a>");
+
+                string paperLink = "<a href=\"" + pdf + "\">paper</a>";
+                string projectLink = "<a href=\"" + paper + ".html\">project page</a>";
+                string bibtexLink = "<a href=\"bibs/" + paper + ".txt\">bibtex</a>";
+                
+                if (p.ContainsKey("project"))
+                {
+                    projectLink = "<a href=\"" + p["project"] + "\">project page</a>";
+                }
+
+                string linkLine;
+                if(p.ContainsKey("video"))
+                {
+                    string videoLink = "<a href=\"" + p["video"] + "\">video</a>";
+                    linkLine = paperLink + " | " + videoLink + " | " + bibtexLink + " | " + projectLink;
+                }
+                else
+                {
+                    linkLine = paperLink + " | " + bibtexLink + " | " + projectLink;
+                }
+
+                lines.Add(linkLine);
+                
                 lines.Add("</div>");
                 lines.Add("</div>");
+
+                lines.Add("<br/><p class=\"borderexample\"></p><br/>");
             }
 
             lines.Add("</div>");

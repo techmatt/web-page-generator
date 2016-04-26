@@ -1,3 +1,9 @@
+3DMatch
+opt
+pigraphs
+ebb
+actSynth
+realtimeRendering
 scenegrok
 deformables
 exotypes
